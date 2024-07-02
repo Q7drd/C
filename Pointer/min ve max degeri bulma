@@ -1,0 +1,26 @@
+#include <stdio.h>
+#define N 10
+
+int main()
+{
+	int i,min,max;
+	int dizi[N];
+	printf("%d tane deger giriniz\n",N);
+	for(i=0;i<N;i++)
+	{
+		scanf("%d",dizi+i);   
+	}
+	
+	max=min=*dizi;
+	for(i=1;i<N;i++)
+	{
+		if(*(dizi+i)>max)
+	{max=*(dizi+i);}
+		if(*(dizi+i)<min)
+		{min=*(dizi+i);}
+	}
+	printf("Max degerimiz =%d\nMin degerimiz=%d\n",max,min);
+	
+	
+	return 0;
+}
