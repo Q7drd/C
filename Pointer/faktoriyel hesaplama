@@ -1,0 +1,23 @@
+#include <stdio.h>
+int faktoriyel(int*);
+int main()
+{
+	int n,orj;
+	printf("Lutfen faktoriyeli alinacak sayiyi giriniz");
+	scanf("%d",&n);
+	orj=n;
+	printf("%d!=%d",orj,faktoriyel(&n));
+	
+	
+}
+
+int faktoriyel(int *n)
+{
+	int sonuc=1;
+	int i;
+	for(i=1;i<=*n;i++)
+	{
+		sonuc*=i;
+	}
+	return sonuc;
+}
