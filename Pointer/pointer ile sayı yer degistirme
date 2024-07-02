@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void yerdegistir(int*,int*);
+
+int main()
+{
+	int s1,s2;
+	printf("Lutfen 2 adet sayi giriniz\n");
+	scanf("%d%d",&s1,&s2);
+	
+	printf("Sayilarim yer degistirmeden once\n Ilk sayim=%d\n Ikinci sayim=%d\n",s1,s2);
+	yerdegistir(&s1,&s2);
+}
+
+void yerdegistir(int*s1,int*s2)
+{
+   int gecici;
+   gecici=*s1;
+   *s1=*s2;
+   *s2=gecici;
+  printf("Sayilarim yer degistirdikten sonra\n Ilk sayim=%d\n Ikinci sayim=%d\n",*s1,*s2);
+	
+}
