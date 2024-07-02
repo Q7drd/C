@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main()
+{
+	int dizi[10];
+	int i,n,gecici ;
+	int *ptr,*ptr2;
+	
+	printf("Lutfen dizinin eleman sayisini giriniz\n");
+	scanf("%d",&n);
+	
+	/*for(i=0;i<n;i++)
+	{
+		scanf("%d",&dizi[i]);              //pointersız boyle yapılıyor,
+	}*/
+	
+	for(ptr=dizi;ptr<dizi+n;ptr++)
+	{
+		printf("Lutfen eleman giriniz\n");
+		scanf("%d",ptr);
+	}
+	printf("Dizimizin ilk hali\n");
+	for(ptr=dizi;ptr<dizi+n;ptr++)
+	{
+		printf("%d\t",*ptr);
+	}
+	printf("\n");
+	for(ptr=dizi,ptr2=dizi+n-1;ptr<ptr2;ptr++,ptr2--)
+	{
+		gecici=*ptr;
+		*ptr=*ptr2;
+		*ptr2=gecici;
+	}
+	printf("Dizimizin elemanlari yer degistirdikten sonra\n");
+	for(ptr=dizi;ptr<dizi+n;ptr++)
+	{
+		printf("%d\t",*ptr);
+	}
+	
+	
+	return 0 ;
+}
